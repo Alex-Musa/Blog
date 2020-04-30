@@ -5,6 +5,8 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
+const PORT = process.env.PORT || 5000
+
 // الاتصال في قاعده البيانات
 mongoose.connect('mongodb://alex:kc1234@ds051655.mlab.com:51655/heroku_599phsfp',
 { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
@@ -27,4 +29,4 @@ app.get('/', async (req,res) => {
 // articles للقرائه داخل الملف في route
 app.use('/articles', articleRouter)
 
-app.listen(5000)
+app.listen(PORT)
