@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 const app = express()
 
 // الاتصال في قاعده البيانات
-mongoose.connect('mongodb://localhost/blog',
+mongoose.connect('mongodb://alex:kc1234@ds051655.mlab.com:51655/heroku_599phsfp',
 { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
  
 // view engine يحول ejs كود الى html
